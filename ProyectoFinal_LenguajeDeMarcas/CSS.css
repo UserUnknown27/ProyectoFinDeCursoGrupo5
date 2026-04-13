@@ -1,0 +1,54 @@
+        /* estilos.css - empezando */
+        body {
+            background-color: #f5f0e8;
+            font-family: Georgia, serif;
+        }
+
+        /* header sin terminar */
+        .navbar {
+            background-color: #3b2f1e;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 24px;
+        }
+
+        /* esto no funciona bien todavía */
+        .nav-link {
+            color: rgb(255, 255, 255) !important;
+        }
+
+        /* hero - sin imágen todavía */
+        .hero {
+            background-color: #c8b89a;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #3b2f1e;
+            /* falta margin */
+        }
+
+        /* seccion libros - sin terminar */
+        .libros {
+            padding: 30px;
+        }
+
+        .libro-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* sin bordes redondeados todavia */
+            margin-bottom: 10px;
+        }
+
+        /* footer - solo empezado */
+        footer {
+            background: #3b2f1e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* le falta margin-top */
+        }
