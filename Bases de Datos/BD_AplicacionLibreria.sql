@@ -5,11 +5,11 @@ USE libreria;
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
     tipo ENUM('cliente','empleado') NOT NULL,
-    nombre VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(100) NOT NULL,
+    nombre_completo VARCHAR(150) NOT NULL,
     dni CHAR(9) NOT NULL UNIQUE,
     email VARCHAR(100) UNIQUE,
     telefono VARCHAR(15),
+    contraseña VARCHAR(30) NOT NULL,
     PRIMARY KEY (id_usuario),
     CHECK (dni REGEXP '^[0-9]{8}[A-Z]$')
 );
@@ -84,26 +84,23 @@ CREATE TABLE pedido (
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
-INSERT INTO usuario (tipo,nombre,apellidos,dni,email) VALUES
-('empleado','Ana','Lopez','12345678A','ana@mail.com'),
-('cliente','Luis','Perez','23456789B','luis@mail.com');
+INSERT INTO usuario (tipo, nombre_completo, dni, email, contraseña) VALUES
+('empleado', 'Ana Lopez', '12345678A', 'ana@mail.com', 'pass123'),
+('cliente', 'Luis Perez', '23456789B', 'luis@mail.com', 'pass456');
 
-INSERT INTO empleado VALUES (1,'gerente',2000);
-INSERT INTO cliente VALUES (2,5);
+INSERT INTO empleado (id_empleado, cargo, salario) VALUES (1, 'gerente', 2000);
+INSERT INTO cliente (id_cliente, descuento) VALUES (2, 5);
 
 INSERT INTO editorial (nombre) VALUES ('Planeta');
 INSERT INTO categoria (nombre) VALUES ('Novela');
-
 INSERT INTO autor (nombre) VALUES ('Gabriel Garcia Marquez');
 
-INSERT INTO libro (titulo,isbn,precio,stock,id_editorial,id_categoria)
-VALUES ('Cien años de soledad','123-1234567890',20,10,1,1);
+INSERT INTO libro (titulo, isbn, precio, stock, id_editorial, id_categoria)
+VALUES ('Cien años de soledad', '123-1234567890', 20, 10, 1, 1);
 
-INSERT INTO pedido (id_cliente,total) VALUES (2,20);
+INSERT INTO pedido (id_cliente, total) VALUES (2, 20);
 
 UPDATE libro SET stock = stock - 1 WHERE id_libro = 1;
-
-DELETE FROM libro WHERE id_libro = 1;
 
 SELECT * FROM libro;
 
@@ -114,17 +111,17 @@ GROUP BY c.id_cliente;
 
 SELECT AVG(precio) FROM libro;
 
-SELECT nombre FROM usuario
+SELECT nombre_completo FROM usuario
 WHERE id_usuario IN (
     SELECT id_cliente FROM pedido
 );
 
-SELECT u.nombre, l.titulo
+SELECT u.nombre_completo, l.titulo
 FROM usuario u
-JOIN cliente c ON u.id_usuario = c.id_cliente
-JOIN pedido p ON c.id_cliente = p.id_cliente
+JOIN pedido p ON u.id_usuario = p.id_cliente
 JOIN libro l ON l.id_libro = 1;
 
 CREATE VIEW vista_libros AS
 SELECT titulo, precio, stock FROM libro;
 
+SELECT * FROM vista_libros;
