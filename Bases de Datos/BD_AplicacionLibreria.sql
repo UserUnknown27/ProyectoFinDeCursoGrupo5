@@ -78,7 +78,7 @@ CREATE TABLE libro_autor (
 CREATE TABLE pedido (
     id_pedido INT AUTO_INCREMENT,
     id_cliente INT,
-    fecha DATE DEFAULT CURRENT_DATE,
+    fecha DATE DEFAULT (CURRENT_DATE),
     total DECIMAL(8,2) DEFAULT 0,
     PRIMARY KEY (id_pedido),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
