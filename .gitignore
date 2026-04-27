@@ -1,0 +1,14 @@
+# Copilados
+*.class
+*.jar
+*.war
+
+# Carpeta de NetBeans
+nbproject/private/
+build/
+dist/
+nb-configuration.xal
+
+#Archivos de sistema
+.DS_Sotore
+Thumbs.db
