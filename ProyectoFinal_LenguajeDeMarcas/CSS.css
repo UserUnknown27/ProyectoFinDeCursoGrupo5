@@ -1,54 +1,495 @@
-        /* estilos.css - empezando */
-        body {
-            background-color: #f5f0e8;
-            font-family: Georgia, serif;
-        }
+:root {
+    --color-oscuro: #3b2f1e;
+    --color-medio: #6b4f2e;
+    --color-claro: #c8b89a;
+    --color-fondo: #f5f0e8;
+    --color-verde: #4a5e3a;
+    --color-verde-claro: #7a9460;
+    --color-acento: #8b1a1a;
+    --sombra-suave: 0 4px 16px rgba(59, 47, 30, 0.12);
+}
 
-        /* header sin terminar */
-        .navbar {
-            background-color: #3b2f1e;
-        }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .navbar-brand {
-            color: white;
-            font-size: 24px;
-        }
+body {
+    background-color: var(--color-fondo);
+    font-family: Georgia, serif;
+    color: var(--color-oscuro);
+    line-height: 1.7;
+}
 
-        /* esto no funciona bien todavía */
-        .nav-link {
-            color: rgb(255, 255, 255) !important;
-        }
 
-        /* hero - sin imágen todavía */
-        .hero {
-            background-color: #c8b89a;
-            padding: 60px 20px;
-            text-align: center;
-        }
+.navbar {
+    background-color: var(--color-oscuro);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
 
-        .hero h1 {
-            font-size: 40px;
-            color: #3b2f1e;
-            /* falta margin */
-        }
+.navbar-brand {
+    color: white !important;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-        /* seccion libros - sin terminar */
-        .libros {
-            padding: 30px;
-        }
+.nav-link {
+    color: var(--color-claro);
+    margin: 0 6px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+}
 
-        .libro-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            /* sin bordes redondeados todavia */
-            margin-bottom: 10px;
-        }
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+    border-bottom-color: var(--color-claro);
+}
 
-        /* footer - solo empezado */
-        footer {
-            background: #3b2f1e;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            /* le falta margin-top */
-        }
+
+.dropdown-menu {
+    background-color: var(--color-oscuro);
+    border: 1px solid var(--color-medio);
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: var(--color-claro);
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-medio);
+    color: white;
+}
+
+
+.carousel-item {
+    height: 400px;
+    position: relative;
+}
+
+.diapositiva-carrusel-1 {
+    background: linear-gradient(135deg, #c8b89a, #a89060);
+}
+
+.diapositiva-carrusel-2 {
+    background: linear-gradient(135deg, #4a5e3a, #7a9460);
+}
+
+.diapositiva-carrusel-3 {
+    background: linear-gradient(135deg, #3b2f1e, #6b4f2e);
+}
+
+.contenido-carrusel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.contenido-carrusel h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.contenido-carrusel p {
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.diapositiva-oscura {
+    color: var(--color-oscuro);
+}
+
+.diapositiva-clara {
+    color: white;
+}
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar {
+    opacity: 0;
+}
+
+.animar.visible {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.animar:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animar:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.animar:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.animar:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.animar:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.animar:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.animar:nth-child(7) {
+    animation-delay: 0.48s;
+}
+
+.animar:nth-child(8) {
+    animation-delay: 0.56s;
+}
+
+.animar:nth-child(9) {
+    animation-delay: 0.64s;
+}
+
+.titulo-categoria {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-oscuro);
+    border-bottom: 2px solid var(--color-verde);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+.seccion {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    font-size: 28px;
+    font-weight: bold;
+    border-left: 5px solid var(--color-verde);
+    padding-left: 15px;
+    margin-bottom: 35px;
+}
+
+
+.tarjeta-libro {
+    border: 1px solid var(--color-claro);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 24px;
+    background: white;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    cursor: pointer;
+}
+
+.tarjeta-libro:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-suave);
+    border-color: var(--color-verde);
+}
+
+.imagen-libro {
+    /* ... (mantén tus propiedades actuales como width, height, etc.) ... */
+
+    /* ESTAS SON LAS LÍNEAS QUE ARREGLAN EL PROBLEMA: */
+    background-size: cover;
+    /* Escala la imagen para cubrir todo el div sin deformarla */
+    background-position: center;
+    /* Centra la imagen tanto horizontal como verticalmente */
+    background-repeat: no-repeat;
+
+
+    background-color: transparent;
+    color: transparent;
+    text-shadow: none;
+}
+
+
+
+.imagen-libro.con-imagen {
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+.imagen-libro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.tarjeta-libro:hover .imagen-libro::after {
+    left: 100%;
+}
+
+.tarjeta-libro:hover .imagen-libro {
+    transform: scale(1.03);
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: var(--color-acento);
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 1;
+}
+
+.tarjeta-libro h5 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.tarjeta-libro .autor {
+    color: var(--color-medio);
+    font-size: 13px;
+    font-style: italic;
+}
+
+.tarjeta-libro .precio {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--color-verde);
+    margin-top: 8px;
+}
+
+.etiqueta-genero {
+    background-color: var(--color-fondo);
+    color: var(--color-medio);
+    border: 1px solid var(--color-claro);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+
+.tabla-principal th {
+    background-color: var(--color-oscuro);
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.tabla-principal td {
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-claro);
+    font-size: 14px;
+}
+
+.tabla-principal tr:nth-child(even) {
+    background-color: #f0e8d8;
+}
+
+.tabla-principal tr:hover {
+    background-color: #e8dcc8;
+}
+
+
+.seccion-formulario {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--sombra-suave);
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--color-oscuro);
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--color-claro);
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    padding: 10px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-verde);
+    box-shadow: 0 0 0 3px rgba(74, 94, 58, 0.15);
+    outline: none;
+}
+
+.boton-principal {
+    background-color: var(--color-verde);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    transition: background 0.25s, transform 0.2s;
+    cursor: pointer;
+}
+
+.boton-principal:hover {
+    background-color: var(--color-oscuro);
+    transform: translateY(-2px);
+}
+
+
+.banner-suscripcion {
+    background-color: var(--color-verde);
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.banner-suscripcion h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.banner-suscripcion p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.formulario-correo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.formulario-correo input {
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    width: 300px;
+    font-family: Georgia, serif;
+}
+
+.formulario-correo input:focus {
+    outline: 2px solid var(--color-claro);
+}
+
+.formulario-correo button {
+    background-color: var(--color-oscuro);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    transition: background 0.2s;
+}
+
+.formulario-correo button:hover {
+    background-color: var(--color-medio);
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.icono-flotante {
+    display: inline-block;
+    font-size: 48px;
+    animation: flotar 3s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    padding: 40px 20px 20px;
+}
+
+footer h5 {
+    color: white;
+    margin-bottom: 14px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+footer a {
+    color: var(--color-claro);
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.separador-pie {
+    border-top: 1px solid var(--color-medio);
+    margin: 20px 0 15px;
+}
+
+.pie-inferior {
+    text-align: center;
+    font-size: 12px;
+    color: #a09070;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novela - BookFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="HTML.html">📚 BookFlow</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogo.html">Todos los libros</a></li>
+                            <li><a class="dropdown-item" href="catalogo-novela.html">Novela</a></li>
+                            <li><a class="dropdown-item" href="catalogo-clasicos.html">Clásicos</a></li>
+                            <li><a class="dropdown-item" href="catalogo-infantil.html">Infantil</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:#6b4f2e;">
+                            </li>
+                            <li><a class="dropdown-item" href="novedades.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container seccion" style="min-height: 70vh;">
+        <h2 class="titulo-seccion text-center mx-auto" style="max-width: fit-content;">Catálogo: Novela</h2>
+        <div class="row pt-4">
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: url('100_años_soledad.png');"></div>
+                    <span class="etiqueta-genero">Realismo mágico</span>
+                    <h5>Cien años de soledad</h5>
+                    <p class="autor">Gabriel García Márquez</p>
+                    <p class="precio">12,00 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (5 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c1">Ver descripción</button>
+                        <div class="collapse mt-2" id="c1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">
+                                La historia épica de la familia Buendía a lo largo de siete generaciones en el mítico
+                                pueblo de
+                                Macondo, donde lo mágico y lo cotidiano se entrelazan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #1a1a2e, #e94560);">📖 1984
+                    </div>
+                    <span class="etiqueta-genero">Distopía</span>
+                    <h5>1984</h5>
+                    <p class="autor">George Orwell</p>
+                    <p class="precio">11,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (12 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c2">Ver descripción</button>
+                        <div class="collapse mt-2" id="c2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una brutal visión
+                                de un
+                                futuro totalitario donde el Gran Hermano vigila cada movimiento y el pensamiento libre
+                                es el
+                                mayor crimen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #0f0c29, #302b63);">📖 La
+                        Sombra del Viento</div>
+                    <span class="etiqueta-genero">Misterio</span>
+                    <h5>La sombra del viento</h5>
+                    <p class="autor">Carlos Ruiz Zafón</p>
+                    <p class="precio">13,50 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (3 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c3">Ver descripción</button>
+                        <div class="collapse mt-2" id="c3">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un joven descubre
+                                un
+                                libro maldito en el Cementerio de los Libros Olvidados y se sumerge en un misterio que
+                                cambiará
+                                su vida para siempre.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">📖 El Señor
+                        de los Anillos</div>
+                    <span class="etiqueta-genero">Fantasía</span>
+                    <h5>El señor de los anillos</h5>
+                    <p class="autor">J.R.R. Tolkien</p>
+                    <p class="precio">25,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (8 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c4">Ver descripción</button>
+                        <div class="collapse mt-2" id="c4">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Frodo Bolsón
+                                emprende una
+                                aventura épica para destruir el Anillo Único y salvar la Tierra Media de la oscuridad de
+                                Sauron.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #c94b4b, #4b134f);">📖 Orgullo
+                        y Prejuicio</div>
+                    <span class="etiqueta-genero">Romance</span>
+                    <h5>Orgullo y prejuicio</h5>
+                    <p class="autor">Jane Austen</p>
+                    <p class="precio">9,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (15 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c5">Ver descripción</button>
+                        <div class="collapse mt-2" id="c5">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">La clásica
+                                historia de
+                                amor, malentendidos y convenciones sociales entre Elizabeth Bennet y el señor Darcy en
+                                la
+                                Inglaterra del siglo XIX.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #3a6186, #89253e);">📖 Crónica
+                        de una Muerte</div>
+                    <span class="etiqueta-genero">Ficción</span>
+                    <h5>Crónica de una muerte anunciada</h5>
+                    <p class="autor">Gabriel García Márquez</p>
+                    <p class="precio">10,50 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (4 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c6">Ver descripción</button>
+                        <div class="collapse mt-2" id="c6">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Reconstrucción
+                                meticulosa
+                                de un asesinato que todo el pueblo sabía que iba a ocurrir pero nadie hizo nada por
+                                evitar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #536976, #292e49);">📖 Matar a
+                        un Ruiseñor</div>
+                    <span class="etiqueta-genero">Drama</span>
+                    <h5>Matar a un ruiseñor</h5>
+                    <p class="autor">Harper Lee</p>
+                    <p class="precio">12,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (7 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c7">Ver descripción</button>
+                        <div class="collapse mt-2" id="c7">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una mirada
+                                profunda a la
+                                injusticia racial en el sur de los Estados Unidos a través de los ojos inocentes de la
+                                pequeña
+                                Scout Finch.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #b79891, #94716b);">📖 El
+                        Alquimista</div>
+                    <span class="etiqueta-genero">Aventuras</span>
+                    <h5>El alquimista</h5>
+                    <p class="autor">Paulo Coelho</p>
+                    <p class="precio">8,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (20 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c8">Ver descripción</button>
+                        <div class="collapse mt-2" id="c8">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El viaje del
+                                joven pastor
+                                Santiago desde Andalucía hasta las pirámides de Egipto en busca de su leyenda personal y
+                                un
+                                tesoro escondido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #d4418e, #0652c5);">📖
+                        Fahrenheit 451</div>
+                    <span class="etiqueta-genero">Ciencia ficción</span>
+                    <h5>Fahrenheit 451</h5>
+                    <p class="autor">Ray Bradbury</p>
+                    <p class="precio">10,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (6 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c9">Ver descripción</button>
+                        <div class="collapse mt-2" id="c9">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un futuro
+                                aterrador donde
+                                los bomberos no apagan incendios sino que queman libros, y un hombre decide desafiar al
+                                sistema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>📚 BookFlow</h5>
+                    <p>Tu librería de siempre.<br>Más de 20 años<br>acercando libros a<br>las personas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegación</h5>
+                    <a href="HTML.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <a href="catalogo-novela.html">Novela</a>
+                    <a href="catalogo-clasicos.html">Clásicos</a>
+                    <a href="catalogo-infantil.html">Infantil</a>
+                    <a href="novedades.html">Novedades</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>📍 Calle Mayor, 14<br>
+                        Zaragoza, 50001<br>
+                        📞 976 000 000<br>
+                        ✉️ contacto@bookflow.es</p>
+                </div>
+            </div>
+            <div class="separador-pie"></div>
+            <div class="pie-inferior">
+                © 2025 BookFlow — Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JAVASCRIPT.js"></script>
+</body>
+
+</html>

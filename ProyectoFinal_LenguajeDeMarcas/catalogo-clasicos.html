@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clásicos - BookFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="HTML.html">📚 BookFlow</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogo.html">Todos los libros</a></li>
+                            <li><a class="dropdown-item" href="catalogo-novela.html">Novela</a></li>
+                            <li><a class="dropdown-item" href="catalogo-clasicos.html">Clásicos</a></li>
+                            <li><a class="dropdown-item" href="catalogo-infantil.html">Infantil</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:#6b4f2e;">
+                            </li>
+                            <li><a class="dropdown-item" href="novedades.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container seccion" style="min-height: 70vh;">
+        <h2 class="titulo-seccion text-center mx-auto" style="max-width: fit-content;">Catálogo: Clásicos</h2>
+        <div class="row pt-4">
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #5c3d2e, #8b6914);">📖 Don Quijote</div>
+                    <span class="etiqueta-genero">Clásico español</span>
+                    <h5>Don Quijote de la Mancha</h5>
+                    <p class="autor">Miguel de Cervantes</p>
+                    <p class="precio">10,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (10 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl1">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Las hilarantes y tristes aventuras del hidalgo que enloqueció leyendo libros de caballerías y salió a recorrer el mundo junto a su fiel escudero Sancho Panza.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #2b5876, #4e4376);">📖 El Conde de Montecristo</div>
+                    <span class="etiqueta-genero">Aventuras</span>
+                    <h5>El Conde de Montecristo</h5>
+                    <p class="autor">Alexandre Dumas</p>
+                    <p class="precio">15,00 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (2 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl2">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una épica historia de traición, escape de prisión y una venganza meticulosamente planeada que cruza continentes y décadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #3d3d3d, #7b241c);">📖 Crimen y Castigo</div>
+                    <span class="etiqueta-genero">Novela psicológica</span>
+                    <h5>Crimen y Castigo</h5>
+                    <p class="autor">Fiódor Dostoyevski</p>
+                    <p class="precio">13,00 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (5 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl3">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl3">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El devastador tormento mental de un estudiante pobre que comete un terrible asesinato creyendo estar por encima de la moral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #1f4037, #99f2c8);">📖 Los Miserables</div>
+                    <span class="etiqueta-genero">Clásico francés</span>
+                    <h5>Los Miserables</h5>
+                    <p class="autor">Victor Hugo</p>
+                    <p class="precio">18,00 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (4 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl4">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl4">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">La redención de Jean Valjean, un expresidiario perseguido por el inspector Javert a través de la tumultuosa Francia del siglo XIX.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #c2a36e, #7a6230);">📖 La Odisea</div>
+                    <span class="etiqueta-genero">Épica</span>
+                    <h5>La Odisea</h5>
+                    <p class="autor">Homero</p>
+                    <p class="precio">11,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (9 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl5">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl5">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El largo y peligroso viaje de regreso a casa del héroe griego Odiseo tras la guerra de Troya, enfrentando monstruos y dioses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #141e30, #243b55);">📖 Hamlet</div>
+                    <span class="etiqueta-genero">Tragedia</span>
+                    <h5>Hamlet</h5>
+                    <p class="autor">William Shakespeare</p>
+                    <p class="precio">9,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (11 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl6">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl6">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El príncipe de Dinamarca jura vengar la muerte de su padre en esta obra maestra que explora la duda, la locura y la traición.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #333333, #5a8a3c);">📖 Frankenstein</div>
+                    <span class="etiqueta-genero">Terror gótico</span>
+                    <h5>Frankenstein</h5>
+                    <p class="autor">Mary Shelley</p>
+                    <p class="precio">10,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (8 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl7">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl7">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El científico Victor Frankenstein crea vida a partir de cadáveres, desatando una tragedia que cuestiona los límites de la ciencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #6b0f1a, #b91372);">📖 Cumbres Borrascosas</div>
+                    <span class="etiqueta-genero">Drama romántico</span>
+                    <h5>Cumbres Borrascosas</h5>
+                    <p class="autor">Emily Brontë</p>
+                    <p class="precio">11,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (14 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl8">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl8">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">La destructiva e intensa pasión entre Heathcliff y Catherine Earnshaw en los páramos de Yorkshire.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #0f2027, #870000);">📖 Drácula</div>
+                    <span class="etiqueta-genero">Terror de vampiros</span>
+                    <h5>Drácula</h5>
+                    <p class="autor">Bram Stoker</p>
+                    <p class="precio">12,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (7 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl9">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="cl9">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El conde vampiro viaja desde Transilvania a Londres sembrando el terror, mientras un grupo de valientes intenta detenerlo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>📚 BookFlow</h5>
+                    <p>Tu librería de siempre.<br>Más de 20 años<br>acercando libros a<br>las personas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegación</h5>
+                    <a href="HTML.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <a href="catalogo-novela.html">Novela</a>
+                    <a href="catalogo-clasicos.html">Clásicos</a>
+                    <a href="catalogo-infantil.html">Infantil</a>
+                    <a href="novedades.html">Novedades</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>📍 Calle Mayor, 14<br>
+                        Zaragoza, 50001<br>
+                        📞 976 000 000<br>
+                        ✉️ contacto@bookflow.es</p>
+                </div>
+            </div>
+            <div class="separador-pie"></div>
+            <div class="pie-inferior">
+                © 2025 BookFlow — Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JAVASCRIPT.js"></script>
+</body>
+
+</html>

@@ -1,86 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <!-- falta viewport meta -->
-    <title>BookFlow</title>
-    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFlow - Librería Clásica</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR - el menú desplegable no funciona aún -->
-    <nav class="navbar navbar-expand-lg">
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">📚 BookFlow</a>
+            <a class="navbar-brand" href="HTML.html">📚 BookFlow</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <!-- falta la pagina de novedades -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="HTML.html">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogo.html">Todos los libros</a></li>
+                            <li><a class="dropdown-item" href="catalogo-novela.html">Novela</a></li>
+                            <li><a class="dropdown-item" href="catalogo-clasicos.html">Clásicos</a></li>
+                            <li><a class="dropdown-item" href="catalogo-infantil.html">Infantil</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:#6b4f2e;">
+                            </li>
+                            <li><a class="dropdown-item" href="novedades.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <h1>Bienvenido a BookFlow</h1>
-        <p>Tu librería de confianza</p>
-        <!-- el boton no va a ningun lado todavia -->
-        <button class="btn btn-dark">Ver catálogo</button>
+    
+    <div id="carrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active diapositiva-carrusel-1">
+                <div class="contenido-carrusel diapositiva-oscura">
+                    <div class="icono-flotante">📚</div>
+                    <h2>Bienvenido a BookFlow</h2>
+                    <p>Tu librería clásica de confianza desde 2003</p>
+                    <a href="catalogo.html" class="btn btn-dark px-4 py-2">Ver catálogo</a>
+                </div>
+            </div>
+            <div class="carousel-item diapositiva-carrusel-2">
+                <div class="contenido-carrusel diapositiva-clara">
+                    <div style="font-size:48px; margin-bottom:20px;">🌿</div>
+                    <h2>Novedades de la semana</h2>
+                    <p>Más de 50 títulos nuevos cada mes</p>
+                    <a href="catalogo.html" class="btn btn-light px-4 py-2">Explorar</a>
+                </div>
+            </div>
+            <div class="carousel-item diapositiva-carrusel-3">
+                <div class="contenido-carrusel diapositiva-clara">
+                    <div style="font-size:48px; margin-bottom:20px;">☕</div>
+                    <h2>Club de Lectura BookFlow</h2>
+                    <p>Cada mes un libro. Cada libro, una historia.</p>
+                    <a href="nosotros.html" class="btn btn-outline-light px-4 py-2">Únete</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
-    <!-- SECCIÓN LIBROS DESTACADOS - sin terminar -->
-    <div class="container libros">
-        <h2>Libros destacados</h2>
-        <p>aqui van los libros (pendiente de añadir contenido real)</p>
-
+    
+    <div class="container seccion">
+        <h2 class="titulo-seccion">Libros Destacados</h2>
         <div class="row">
-            <!-- solo hay dos tarjetas de momento -->
-            <div class="col-md-4">
-                <div class="libro-card">
-                    <h5>Cien años de soledad</h5>
-                    <p>Gabriel García Márquez</p>
-                    <p>Precio: 12€</p>
-                    <!-- falta imagen -->
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">Realismo mÃ¡gico</span>
+                    <h5>Cien aÃ±os de soledad</h5>
+                    <p class="autor">Gabriel GarcÃ­a MÃ¡rquez</p>
+                    <p class="precio">12,00 â‚¬</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (5 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="c1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">La historia Ã©pica de la familia BuendÃ­a en el mÃ­tico pueblo de Macondo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="libro-card">
-                    <h5>El nombre de la rosa</h5>
-                    <p>Umberto Eco</p>
-                    <p>Precio: 14€</p>
-                    <!-- falta imagen -->
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">DistopÃ­a</span>
+                    <h5>1984</h5>
+                    <p class="autor">George Orwell</p>
+                    <p class="precio">11,00 â‚¬</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (12 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="c2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una brutal visiÃ³n de un futuro totalitario regido por el Gran Hermano.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- tercera columna vacia por error -->
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">ClÃ¡sico espaÃ±ol</span>
+                    <h5>Don Quijote de la Mancha</h5>
+                    <p class="autor">Miguel de Cervantes</p>
+                    <p class="precio">10,00 â‚¬</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (10 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl1">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="cl1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Las hilarantes y tristes aventuras del hidalgo que enloqueciÃ³ leyendo libros de caballerÃ­as.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">Aventuras</span>
+                    <h5>El Conde de Montecristo</h5>
+                    <p class="autor">Alexandre Dumas</p>
+                    <p class="precio">15,00 â‚¬</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (2 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#cl2">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="cl2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una Ã©pica historia de traiciÃ³n, escape y venganza implacable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">FÃ¡bula</span>
+                    <h5>El principito</h5>
+                    <p class="autor">Antoine de Saint-ExupÃ©ry</p>
+                    <p class="precio">8,00 â‚¬</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (25 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#i1">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="i1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un piloto varado en el desierto conoce a un pequeÃ±o prÃ­ncipe de otro planeta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro">ðŸ“–</div>
+                    <span class="etiqueta-genero">FantasÃ­a infantil</span>
+                    <h5>Charlie y la fÃ¡brica de chocolate</h5>
+                    <p class="autor">Roald Dahl</p>
+                    <p class="precio">9,50 â‚¬</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (12 uds)</p>
+                    
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#i2">
+                            Ver descripciÃ³n
+                        </button>
+                        <div class="collapse mt-2" id="i2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un niÃ±o humilde gana un billete dorado para visitar la mayor fÃ¡brica de chocolate del mundo.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER -->
+    
+    <div class="banner-suscripcion">
+        <h3>📩 Mantente al día con nuestras novedades</h3>
+        <p>Suscríbete y recibe cada semana las mejores recomendaciones en tu correo</p>
+        <div class="formulario-correo">
+            <input type="email" placeholder="Tu dirección de correo electrónico" id="emailInput">
+            <button id="btn-suscribir">Suscribirme</button>
+        </div>
+        <p id="msg-suscripcion" style="margin-top:15px; font-size:14px; opacity:0.9;"></p>
+    </div>
+
+    
     <footer>
-        <p>BookFlow 2025</p>
-        <!-- falta información de contacto -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>📚 BookFlow</h5>
+                    <p>Tu librería de siempre.<br>Más de 20 años<br>acercando libros a<br>las personas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegación</h5>
+                    <a href="HTML.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <a href="#">Novela</a>
+                    <a href="#">Clásicos</a>
+                    <a href="#">Infantil</a>
+                    <a href="#">Novedades</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>📍 Calle Mayor, 14<br>
+                        Zaragoza, 50001<br>
+                        📞 976 000 000<br>
+                        ✉️ contacto@bookflow.es</p>
+                </div>
+            </div>
+            <div class="separador-pie"></div>
+            <div class="pie-inferior">
+                © 2025 BookFlow — Todos los derechos reservados
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // menú hamburguesa - básico
-        // todavía no hay más javascript
-        console.log("Página cargada - día 1");
-    </script>
+    <script src="JAVASCRIPT.js"></script>
 </body>
 
 </html>

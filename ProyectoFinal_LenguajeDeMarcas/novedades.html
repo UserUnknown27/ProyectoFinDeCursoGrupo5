@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novedades - BookFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="HTML.html">📚 BookFlow</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                            data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogo.html">Todos los libros</a></li>
+                            <li><a class="dropdown-item" href="catalogo-novela.html">Novela</a></li>
+                            <li><a class="dropdown-item" href="catalogo-clasicos.html">Clásicos</a></li>
+                            <li><a class="dropdown-item" href="catalogo-infantil.html">Infantil</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:#6b4f2e;">
+                            </li>
+                            <li><a class="dropdown-item" href="novedades.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container seccion" style="min-height: 70vh;">
+        <h2 class="titulo-seccion text-center mx-auto" style="max-width: fit-content;">🔥 Últimas Novedades</h2>
+        <div class="row pt-4">
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #fc4a1a, #f7b733);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🔥 Hábitos Atómicos
+                    </div>
+                    <span class="etiqueta-genero">Desarrollo personal</span>
+                    <h5>Hábitos atómicos</h5>
+                    <p class="autor">James Clear</p>
+                    <p class="precio">16,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (30 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n1">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n1">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Pequeños cambios diarios generan resultados extraordinarios. Una guía práctica para construir buenos hábitos y eliminar los malos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #a8003b, #d4145a);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🔴 Reina Roja
+                    </div>
+                    <span class="etiqueta-genero">Thriller</span>
+                    <h5>Reina Roja</h5>
+                    <p class="autor">Juan Gómez-Jurado</p>
+                    <p class="precio">18,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (14 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n2">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n2">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Antonia Scott es la persona más inteligente del mundo y el eje de un proyecto secreto para resolver crímenes imposibles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #232526, #414345);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🧠 Sapiens
+                    </div>
+                    <span class="etiqueta-genero">Ensayo</span>
+                    <h5>Sapiens: De animales a dioses</h5>
+                    <p class="autor">Yuval Noah Harari</p>
+                    <p class="precio">21,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (8 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n3">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n3">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una fascinante historia de la humanidad, desde los primeros Homo sapiens hasta las revoluciones que moldearon el mundo moderno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #c0392b, #8e44ad);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🔍 El Código Da Vinci
+                    </div>
+                    <span class="etiqueta-genero">Misterio</span>
+                    <h5>El código Da Vinci</h5>
+                    <p class="autor">Dan Brown</p>
+                    <p class="precio">14,50 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (5 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n4">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n4">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un turbulento misterio oculto en las obras de Leonardo Da Vinci lleva a Robert Langdon a una carrera contra el tiempo por Europa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🚂 La Chica del Tren
+                    </div>
+                    <span class="etiqueta-genero">Suspenso</span>
+                    <h5>La chica del tren</h5>
+                    <p class="autor">Paula Hawkins</p>
+                    <p class="precio">15,00 €</p>
+                    <p class="stock text-warning" style="font-size: 14px; font-weight: bold;">En stock (2 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n5">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n5">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Una viajera diaria observa desde el tren una aparente vida perfecta que de repente se desmorona, arrastrándola a un peligroso misterio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #556270, #ff6b6b);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🏔️ Patria
+                    </div>
+                    <span class="etiqueta-genero">Ficción histórica</span>
+                    <h5>Patria</h5>
+                    <p class="autor">Fernando Aramburu</p>
+                    <p class="precio">19,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (10 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n6">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n6">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">El devastador impacto del terrorismo de ETA en dos familias vascas que antes eran amigas, separadas para siempre por la violencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        💡 El Hombre en Busca de Sentido
+                    </div>
+                    <span class="etiqueta-genero">Psicología</span>
+                    <h5>El hombre en busca de sentido</h5>
+                    <p class="autor">Viktor Frankl</p>
+                    <p class="precio">11,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (19 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n7">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n7">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">La sobrecogedora experiencia de un psiquiatra en un campo de concentración nazi y cómo encontró propósito incluso en el sufrimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #c33764, #1d2671);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        🏹 Los Juegos del Hambre
+                    </div>
+                    <span class="etiqueta-genero">Ciencia ficción</span>
+                    <h5>Los juegos del hambre</h5>
+                    <p class="autor">Suzanne Collins</p>
+                    <p class="precio">15,50 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (16 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n8">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n8">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Veinticuatro jóvenes son obligados a luchar a muerte en una arena televisada mientras Katniss Everdeen se convierte en símbolo de la rebelión.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animar mb-4">
+                <div class="tarjeta-libro h-100 d-flex flex-column">
+                    <div class="imagen-libro" style="background: linear-gradient(135deg, #f857a6, #ff5858);">
+                        <span class="etiqueta-nuevo">Nuevo</span>
+                        💥 El Sutil Arte
+                    </div>
+                    <span class="etiqueta-genero">Autoayuda</span>
+                    <h5>El sutil arte de que te importe un caraj*</h5>
+                    <p class="autor">Mark Manson</p>
+                    <p class="precio">14,00 €</p>
+                    <p class="stock text-success" style="font-size: 14px; font-weight: bold;">En stock (22 uds)</p>
+                    <div class="mt-auto pt-2">
+                        <button class="btn boton-principal btn-sm w-100" type="button" data-bs-toggle="collapse" data-bs-target="#n9">
+                            Ver descripción
+                        </button>
+                        <div class="collapse mt-2" id="n9">
+                            <p style="font-size: 13px; color: var(--color-medio); margin-bottom: 0px;">Un enfoque refrescante y sin filtros sobre cómo vivir una vida mejor dejando de intentar ser positivo todo el tiempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>📚 BookFlow</h5>
+                    <p>Tu librería de siempre.<br>Más de 20 años<br>acercando libros a<br>las personas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegación</h5>
+                    <a href="HTML.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <a href="catalogo-novela.html">Novela</a>
+                    <a href="catalogo-clasicos.html">Clásicos</a>
+                    <a href="catalogo-infantil.html">Infantil</a>
+                    <a href="novedades.html">Novedades</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>📍 Calle Mayor, 14<br>
+                        Zaragoza, 50001<br>
+                        📞 976 000 000<br>
+                        ✉️ contacto@bookflow.es</p>
+                </div>
+            </div>
+            <div class="separador-pie"></div>
+            <div class="pie-inferior">
+                © 2025 BookFlow — Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JAVASCRIPT.js"></script>
+</body>
+
+</html>
