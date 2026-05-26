@@ -5,10 +5,10 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="o_4Tu07iGgAQ-7IEPr1e-3" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Usuario" vertex="1">
-          <mxGeometry height="160" width="140" x="30" y="260" as="geometry" />
+          <mxGeometry height="160" width="160" x="30" y="260" as="geometry" />
         </mxCell>
         <mxCell id="o_4Tu07iGgAQ-7IEPr1e-4" parent="o_4Tu07iGgAQ-7IEPr1e-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;u&gt;id_usuario int PK&lt;/u&gt;&lt;div&gt;&lt;div&gt;nombre varchar(100) not null&lt;/div&gt;&lt;div&gt;email varchar (100) not null&lt;/div&gt;&lt;div&gt;Password varchar(250)&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="130" width="140" y="30" as="geometry" />
+          <mxGeometry height="130" width="160" y="30" as="geometry" />
         </mxCell>
         <mxCell id="o_4Tu07iGgAQ-7IEPr1e-7" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Empleado" vertex="1">
           <mxGeometry height="110" width="140" x="210" y="90" as="geometry" />
