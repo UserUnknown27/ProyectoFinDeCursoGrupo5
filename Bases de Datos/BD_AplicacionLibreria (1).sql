@@ -163,7 +163,10 @@ BEGIN
     RETURN total;
 END //
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b2831d20aba2348f03d7456c483468f930fb3ee
 CREATE FUNCTION pedidosActivos(p_cliente INT)
 RETURNS INT
 DETERMINISTIC
