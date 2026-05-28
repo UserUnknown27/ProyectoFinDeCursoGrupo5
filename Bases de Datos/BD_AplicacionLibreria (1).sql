@@ -2,9 +2,9 @@
 -- 1. CONFIGURACIÓN Y ESTRUCTURAS DE USUARIOS
 -- ============================================================================
 
-DROP DATABASE IF EXISTS libreria;
-CREATE DATABASE libreria;
-USE libreria;
+DROP DATABASE IF EXISTS biblioteca;
+CREATE DATABASE biblioteca;
+USE biblioteca;
 
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
@@ -161,15 +161,6 @@ BEGIN
     DECLARE total INT;
     SELECT COUNT(*) INTO total FROM libro;
     RETURN total;
-END //
-
-CREATE FUNCTION calcularIVA(p_id_libro INT)
-RETURNS DECIMAL(10,2)
-DETERMINISTIC
-BEGIN
-    DECLARE precio_libro DECIMAL(6,2);
-    SELECT precio FROM libro WHERE id_libro = p_id_libro;
-    RETURN precio_libro * 0.21;
 END //
 
 CREATE FUNCTION pedidosActivos(p_cliente INT)
@@ -333,5 +324,4 @@ JOIN libro l ON dc.id_libro = l.id_libro;
 
 SELECT * FROM vista_libros;
 SELECT totalLibros();
-SELECT calcularIVA(1);
 SELECT id_cliente, puedePedirMas(id_cliente) FROM cliente;
