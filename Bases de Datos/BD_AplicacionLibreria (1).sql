@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS libreria;
 CREATE DATABASE libreria;
 USE libreria;
 
--- Tablas y Herencia
+-- === TABLAS DE USUARIOS (HERENCIA) ===
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
     tipo ENUM("cliente","empleado") NOT NULL,
@@ -36,6 +36,7 @@ CREATE TABLE empleado (
     CHECK (salario > 0)
 );
 
+-- === TABLAS DE CATÁLOGO ===
 CREATE TABLE editorial (
     id_editorial INT AUTO_INCREMENT,
     nombre VARCHAR(100) UNIQUE NOT NULL,
@@ -76,6 +77,7 @@ CREATE TABLE libro_autor (
     FOREIGN KEY (id_autor) REFERENCES autor(id_autor) ON DELETE CASCADE
 );
 
+-- === TABLAS DE PEDIDOS ===
 CREATE TABLE pedido (
     id_pedido INT AUTO_INCREMENT,
     id_cliente INT,
@@ -85,7 +87,19 @@ CREATE TABLE pedido (
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
--- Inserción de Datos Iniciales
+CREATE TABLE linea_pedido (
+    id_pedido INT,
+    id_libro INT,
+    cantidad INT NOT NULL,
+    precio_unitario DECIMAL(6,2) NOT NULL,
+    PRIMARY KEY (id_pedido, id_libro),
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido) ON DELETE CASCADE,
+    FOREIGN KEY (id_libro) REFERENCES libro(id_libro),
+    CHECK (cantidad > 0),
+    CHECK (precio_unitario > 0)
+);
+
+-- === DATOS DE PRUEBA ===
 INSERT INTO usuario (tipo, nombre_completo, dni, email, contraseña) VALUES
 ("empleado", "Ana Lopez", "12345678A", "ana@mail.com", "pass123"),
 ("cliente", "Luis Perez", "23456789B", "luis@mail.com", "pass456");
@@ -100,9 +114,10 @@ INSERT INTO autor (nombre) VALUES ("Gabriel Garcia Marquez");
 INSERT INTO libro (titulo, isbn, precio, stock, id_editorial, id_categoria)
 VALUES ("Cien años de soledad", "123-1234567890", 20, 10, 1, 1);
 
-INSERT INTO pedido (id_cliente, total) VALUES (2, 20);
+INSERT INTO pedido (id_pedido, id_cliente, total) VALUES (1, 2, 20);
+INSERT INTO linea_pedido (id_pedido, id_libro, cantidad, precio_unitario) VALUES (1, 1, 1, 20);
 
--- Operaciones CRUD y Consultas
+-- === CONSULTAS Y ACTUALIZACIONES ===
 UPDATE libro SET stock = stock - 1 WHERE id_libro = 1;
 
 SELECT * FROM libro;
@@ -119,12 +134,13 @@ WHERE id_usuario IN (
     SELECT id_cliente FROM pedido
 );
 
-SELECT u.nombre_completo, l.titulo
+SELECT u.nombre_completo, l.titulo, lp.cantidad, lp.precio_unitario
 FROM usuario u
 JOIN pedido p ON u.id_usuario = p.id_cliente
-JOIN libro l ON l.id_libro = 1;
+JOIN linea_pedido lp ON p.id_pedido = lp.id_pedido
+JOIN libro l ON lp.id_libro = l.id_libro;
 
--- Vistas e Índices
+-- === VISTAS E ÍNDICES ===
 CREATE VIEW vista_libros AS
 SELECT titulo, precio, stock FROM libro;
 
@@ -136,7 +152,7 @@ SELECT nombre_completo, email, telefono FROM usuario WHERE tipo = "cliente";
 CREATE INDEX idx_libro_titulo ON libro(titulo);
 CREATE INDEX idx_usuario_nombre ON usuario(nombre_completo);
 
--- Funciones Almacenadas
+-- === FUNCIONES ALMACENADAS ===
 DELIMITER //
 
 CREATE FUNCTION totalLibros()
@@ -186,7 +202,7 @@ SELECT totalLibros();
 SELECT calcularIVA(1);
 SELECT id_cliente, puedePedirMas(id_cliente) FROM cliente;
 
--- Procedimientos y Triggers
+-- === PROCEDIMIENTOS Y TRIGGERS ===
 DELIMITER //
 
 CREATE PROCEDURE insertar_libro(
@@ -213,18 +229,9 @@ END //
 
 DELIMITER ;
 
--- Usuarios, Roles y Privilegios
+-- === ROLES, USUARIOS Y PERMISOS ===
 CREATE ROLE IF NOT EXISTS "rol_administrador";
 CREATE ROLE IF NOT EXISTS "rol_empleado";
-
-GRANT ALL PRIVILEGES ON libreria.* TO "rol_administrador";
-
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.libro TO "rol_empleado";
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.pedido TO "rol_empleado";
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.cliente TO "rol_empleado";
-GRANT SELECT ON libreria.vista_libros TO "rol_empleado";
-GRANT SELECT ON libreria.vista_clientes_contacto TO "rol_empleado";
-GRANT EXECUTE ON PROCEDURE libreria.insertar_libro TO "rol_empleado";
 
 CREATE USER IF NOT EXISTS "daniel"@"localhost" IDENTIFIED BY "daniel";
 CREATE USER IF NOT EXISTS "gloria"@"localhost" IDENTIFIED BY "gloria";
@@ -232,6 +239,18 @@ CREATE USER IF NOT EXISTS "alejandro"@"localhost" IDENTIFIED BY "alejandro";
 
 GRANT "rol_administrador" TO "alejandro"@"localhost";
 GRANT "rol_empleado" TO "daniel"@"localhost", "gloria"@"localhost";
+
+GRANT ALL PRIVILEGES ON libreria.* TO "rol_administrador";
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.libro TO "rol_empleado";
+GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.pedido TO "rol_empleado";
+GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.linea_pedido TO "rol_empleado";
+GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.cliente TO "rol_empleado";
+GRANT SELECT ON libreria.vista_libros TO "rol_empleado";
+GRANT SELECT ON libreria.vista_clientes_contacto TO "rol_empleado";
+GRANT EXECUTE ON PROCEDURE libreria.insertar_libro TO "rol_empleado";
+
+FLUSH PRIVILEGES;
 
 SET DEFAULT ROLE "rol_administrador" TO "alejandro"@"localhost";
 SET DEFAULT ROLE "rol_empleado" TO "daniel"@"localhost", "gloria"@"localhost";
