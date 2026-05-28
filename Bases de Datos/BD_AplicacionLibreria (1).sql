@@ -2,9 +2,9 @@
 -- 1. CONFIGURACIÓN Y ESTRUCTURAS DE USUARIOS
 -- ============================================================================
 
-DROP DATABASE IF EXISTS libreria;
-CREATE DATABASE libreria;
-USE libreria;
+DROP DATABASE IF EXISTS biblioteca;
+CREATE DATABASE biblioteca;
+USE biblioteca;
 
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
@@ -163,14 +163,6 @@ BEGIN
     RETURN total;
 END //
 
-CREATE FUNCTION calcularIVA(p_id_libro INT)
-RETURNS DECIMAL(10,2)
-DETERMINISTIC
-BEGIN
-    DECLARE precio_libro DECIMAL(6,2);
-    SELECT precio FROM libro WHERE id_libro = p_id_libro;
-    RETURN precio_libro * 0.21;
-END //
 
 CREATE FUNCTION pedidosActivos(p_cliente INT)
 RETURNS INT
@@ -220,37 +212,9 @@ END //
 
 DELIMITER ;
 
--- ============================================================================
--- 5. SEGURIDAD, ROLES Y PRIVILEGIOS
--- ============================================================================
-
-CREATE ROLE IF NOT EXISTS "rol_administrador";
-CREATE ROLE IF NOT EXISTS "rol_empleado";
-
-CREATE USER IF NOT EXISTS "daniel"@"localhost" IDENTIFIED BY "daniel";
-CREATE USER IF NOT EXISTS "gloria"@"localhost" IDENTIFIED BY "gloria";
-CREATE USER IF NOT EXISTS "alejandro"@"localhost" IDENTIFIED BY "alejandro";
-
-GRANT "rol_administrador" TO "alejandro"@"localhost";
-GRANT "rol_empleado" TO "daniel"@"localhost", "gloria"@"localhost";
-
-GRANT ALL PRIVILEGES ON libreria.* TO "rol_administrador";
-
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.libro TO "rol_empleado";
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.pago_libro TO "rol_empleado";
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.detalle_compra TO "rol_empleado";
-GRANT SELECT, INSERT, UPDATE, DELETE ON libreria.cliente TO "rol_empleado";
-GRANT SELECT ON libreria.vista_libros TO "rol_empleado";
-GRANT SELECT ON libreria.vista_clientes_contacto TO "rol_empleado";
-GRANT EXECUTE ON PROCEDURE libreria.insertar_libro TO "rol_empleado";
-
-FLUSH PRIVILEGES;
-
-SET DEFAULT ROLE "rol_administrador" TO "alejandro"@"localhost";
-SET DEFAULT ROLE "rol_empleado" TO "daniel"@"localhost", "gloria"@"localhost";
 
 -- ============================================================================
--- 6. CARGA DE DATOS (INSERCIONES)
+-- 5. CARGA DE DATOS (INSERCIONES)
 -- ============================================================================
 
 INSERT INTO usuario (id_usuario, tipo, nombre_completo, dni, email, contraseña) VALUES
@@ -307,7 +271,7 @@ INSERT INTO detalle_alquiler (id_pago_alquiler, id_libro, fecha_inicio, fecha_fi
 (2, 1, "2025-05-10", "2025-05-24", 3.50, "bueno");
 
 -- ============================================================================
--- 7. CONSULTAS Y COMPROBACIONES DE VERIFICACIÓN
+-- 6. CONSULTAS Y COMPROBACIONES DE VERIFICACIÓN
 -- ============================================================================
 
 UPDATE libro SET stock = stock - 1 WHERE id_libro = 1;
@@ -333,5 +297,4 @@ JOIN libro l ON dc.id_libro = l.id_libro;
 
 SELECT * FROM vista_libros;
 SELECT totalLibros();
-SELECT calcularIVA(1);
 SELECT id_cliente, puedePedirMas(id_cliente) FROM cliente;

@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS libreria;
-CREATE DATABASE libreria;
-USE libreria;
+DROP DATABASE IF EXISTS biblioteca;
+CREATE DATABASE biblioteca;
+USE biblioteca;
 
 CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT,
