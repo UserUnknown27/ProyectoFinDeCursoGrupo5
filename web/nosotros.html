@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos de la seccion Sobre Nosotros de la libreria -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - BookFlow</title>
+    <!-- Hojas de estilos del framework Bootstrap y nuestro CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="HTML.html">📚 BookFlow</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTML.html">Inicio</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Catálogo</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogo.html">Todos los libros</a></li>
+                            <li><a class="dropdown-item" href="catalogo-novela.html">Novela</a></li>
+                            <li><a class="dropdown-item" href="catalogo-clasicos.html">Clásicos</a></li>
+                            <li><a class="dropdown-item" href="catalogo-infantil.html">Infantil</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:#6b4f2e;">
+                            </li>
+                            <li><a class="dropdown-item" href="novedades.html">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container seccion" style="min-height: 70vh;">
+        <h2 class="titulo-seccion text-center mx-auto mb-4" style="max-width: fit-content;">Nuestra Historia</h2>
+        <div class="row align-items-center mb-5">
+             <div class="col-md-6 animar">
+                  <div style="font-size: 80px; text-align: center; color: var(--color-medio);">📚</div>
+             </div>
+             <div class="col-md-6 animar p-4">
+                  <p class="fs-5">BookFlow nació en 2003 con la misión de acercar la literatura a todos los rincones de nuestra ciudad. Empezamos como un pequeño puesto en la feria del libro y hoy somos un punto de encuentro para miles de lectores.</p>
+                  <p class="text-muted">Nos enorgullecemos de tener ediciones clásicas, las últimas novedades, y un servicio enfocado totalmente en ayudarte a encontrar ese libro que cambiará tu perspectiva.</p>
+             </div>
+        </div>
+
+        
+        <!-- Tabla de horarios requerida por las especificaciones, responsive con table-responsive -->
+        <h2 class="titulo-seccion text-center mx-auto mt-5" style="max-width: fit-content;">Horario de Atención</h2>
+        <div class="table-responsive animar">
+            <table class="table tabla-principal">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Mañana</th>
+                        <th>Tarde</th>
+                        <th>Situación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>09:30 – 13:30</td>
+                        <td>16:30 – 20:00</td>
+                        <td>✅ Abierto</td>
+                    </tr>
+                    <tr>
+                        <td>Martes</td>
+                        <td>09:30 – 13:30</td>
+                        <td>16:30 – 20:00</td>
+                        <td>✅ Abierto</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>09:30 – 13:30</td>
+                        <td>16:30 – 20:00</td>
+                        <td>✅ Abierto</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>09:30 – 13:30</td>
+                        <td>16:30 – 20:00</td>
+                        <td>✅ Abierto</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>09:30 – 13:30</td>
+                        <td>16:30 – 20:00</td>
+                        <td>✅ Abierto</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>10:00 – 14:00</td>
+                        <td>—</td>
+                        <td>⚠️ Solo mañana</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>❌ Cerrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>📚 BookFlow</h5>
+                    <p>Tu librería de siempre.<br>Más de 20 años<br>acercando libros a<br>las personas.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegación</h5>
+                    <a href="HTML.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <a href="#">Novela</a>
+                    <a href="#">Clásicos</a>
+                    <a href="#">Infantil</a>
+                    <a href="#">Novedades</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>📍 Calle Mayor, 14<br>
+                        Zaragoza, 50001<br>
+                        📞 976 000 000<br>
+                        ✉️ contacto@bookflow.es</p>
+                </div>
+            </div>
+            <div class="separador-pie"></div>
+            <div class="pie-inferior">
+                © 2025 BookFlow — Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JAVASCRIPT.js"></script>
+</body>
+
+</html>
